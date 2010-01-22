@@ -21,8 +21,24 @@ void FileEditor::init()
     if ( !file.open( QIODevice::ReadWrite ) )
         exit( -1 );
 
+    QString buf;
     QTextStream in( &file );
-    setPlainText( in.readAll() );
+    while ( !in.atEnd() ) {
+        QString line( in.readLine() );
+
+        if ( !line.isEmpty() ) {
+            if ( !buf.isEmpty() )
+                buf.append( " " );
+            buf.append( line );
+        }
+        else {
+            buf.append( "\n" );
+            appendPlainText( buf );
+            buf.clear();
+        }
+    }
+
+    appendPlainText( buf );
 }
 
 void FileEditor::save()
