@@ -1,5 +1,12 @@
 // A minimal fullscreen text editor
 // Copyright 2010 Abhijit Menon-Sen <ams@toroid.org>
+//
+// Instructions:
+//
+// 1. Run "qmake" to generate Makefile
+// 2. Run "make" to build the wry binary
+// 3. Install it somewhere in your PATH
+// 4. Run "wry filename" to edit a file.
 
 #include "wry.h"
 
