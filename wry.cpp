@@ -7,6 +7,10 @@
 // 2. Run "make" to build the wry binary
 // 3. Install it somewhere in your PATH
 // 4. Run "wry filename" to edit a file.
+//
+// You may use, modify, or redistribute this program without any
+// restrictions. There is no warranty.
+//
 
 #include "wry.h"
 
