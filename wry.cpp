@@ -94,6 +94,11 @@ void FileEditor::save()
     }
 }
 
+void FileEditor::autosave()
+{
+    saver->start( 3000 );
+}
+
 void FileEditor::quit()
 {
     save();
